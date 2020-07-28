@@ -7,6 +7,7 @@ import java.util.List;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.Orientation;
+import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -33,6 +34,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -50,6 +52,20 @@ public class Bibliotheque extends Application {
 		Group root = new Group();
 		//Group root2 = new Group();
 		Scene scene = new Scene(root, 600,700);
+		
+		Separator separator2 = new Separator();
+		separator2.setOrientation(Orientation.VERTICAL);
+		separator2.setMinHeight(600);
+		separator2.setLayoutX(0);
+		separator2.setLayoutY(0);
+		Separator separator1 = new Separator();
+		separator1.setMinWidth(700);
+		separator1.setLayoutX(0);
+		separator1.setLayoutY(0);
+		Separator separator3 = new Separator();
+		separator3.setMinWidth(700);
+		separator3.setLayoutX(0);
+		separator3.setLayoutY(700);
 		
 		Label la = new Label("Catalogue");
 		la.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
@@ -138,7 +154,7 @@ public class Bibliotheque extends Application {
 		te2.setLayoutY(640);
 		te2.setText("Auteur - Titre Livre - Date de Parution");
 		
-		root.getChildren().addAll(la, la1, ra1, ra2, ra3, la2, ch, ch1, ch2, te, bu, bu1, la3, la4, la5, la6, la7, te1, te2);
+		root.getChildren().addAll(la, separator3, separator1, la1, ra1, ra2, ra3, la2, ch, ch1, ch2, te, bu, bu1, la3, la4, la5, separator2, la6, la7, te1, te2);
 		
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Bibliothèque");
