@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
-
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.Orientation;
@@ -243,7 +242,7 @@ public class Composant extends Application {
 			txt.setLayoutY(610);
 			txt.setWrappingWidth(300);
 			txt.setTextAlignment(TextAlignment.JUSTIFY);
-			txt.setFont(Font.font("Mongolian Baiti", 20));
+			txt.setFont(Font.font("Mongolian Baiti", 15));
 			
 			List li = Font.getFamilies();
 			for (int i =0; i<li.size(); i++) {
@@ -259,7 +258,7 @@ public class Composant extends Application {
 			hbox.setLayoutX(20);
 			hbox.setLayoutY(300);
 			
-			root.getChildren().addAll(bu, ra1, ra2, cb, te, pa, sc, s, pr, pi, hl,htmleditor, mb, dp, page, txt, ch, hbox);
+			root.getChildren().addAll(la, bu, ra1, ra2, cb, te, pa, sc, s, pr, pi, hl,htmleditor, mb, dp, page, txt, ch, hbox);
 			
 			primaryStage.show();
 		} catch(Exception e) {
