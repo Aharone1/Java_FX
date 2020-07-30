@@ -44,7 +44,6 @@ import javafx.stage.Stage;
 public class Composant extends Application {
 
 	public void start(Stage primaryStage){
-		// TODO Auto-generated method stub
 		try {
 			Group root = new Group();
 			Scene scene = new Scene(root, 800,950, Color.AQUAMARINE);
@@ -106,8 +105,8 @@ public class Composant extends Application {
 			sc.setMax(100);
 			
 			//9-ComboBox
-			ComboBox<String> cmb = 
-					new ComboBox(FXCollections.observableArrayList("First", new Separator(), "A", "B"));
+			ComboBox<Object> cmb = 
+					new ComboBox<Object>(FXCollections.observableArrayList("First", new Separator(), "A", "B"));
 			cmb.getItems().addAll("C");
 			cmb.setVisibleRowCount(2);
 			
@@ -244,10 +243,9 @@ public class Composant extends Application {
 			txt.setTextAlignment(TextAlignment.JUSTIFY);
 			txt.setFont(Font.font("Mongolian Baiti", 15));
 			
-			List li = Font.getFamilies();
-			for (int i =0; i<li.size(); i++) {
+			List<?> li = Font.getFamilies();
+			for (int i =0; i<li.size(); i++) 
 				System.out.println(li.get(i));
-			}
 			
 			//19-Image / ImageView
 			FileInputStream input = new FileInputStream("img/photofunky.gif");
